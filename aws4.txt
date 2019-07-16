@@ -1,0 +1,18 @@
+--Lambda Python Code
+
+import json
+
+def lambda_handler(event, context):
+    return {
+        'statusCode': 200,
+        'body': event['name']
+    }
+
+
+
+--api mapping
+
+#set($inputRoot = $input.path('$'))
+{ 
+    "name" : "$input.params('name')"
+}

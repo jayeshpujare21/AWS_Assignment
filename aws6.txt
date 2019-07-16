@@ -1,0 +1,59 @@
+--ELB with target type as IP, registering each instance to the ELB
+
+Step 1: Configure a Load Balancer and a Listener
+
+    Open the Amazon EC2 console
+
+    On the navigation pane, under LOAD BALANCING, choose Load Balancers.
+
+    Choose Create Load Balancer.
+
+    For Application Load Balancer, choose Create.
+
+    For Name, type a name for your load balancer.
+
+    For Scheme, choose Internet-facing 
+
+    For IP address type, choose ipv4.
+
+    For Listeners, the default is a listener that accepts HTTP traffic on port 80. 
+
+    For Availability Zones, select at least two Availability Zones from your VPC. I
+
+
+Step 2: Configure Security Settings for an HTTPS Listener
+
+    Select Next
+      
+
+Step 3: Configure a Security Group
+
+    Choose Create a new security group.
+
+    Type a name and description for the security group.
+
+
+Step 4: Configure a Target Group
+
+    For Target group, keep the default, New target group.
+
+    For Name, type a name for the target group.
+
+    For Target type, select IP to register IP addresses.
+
+
+Step 5: Configure Targets for the Target Group
+
+
+	To register IP addresses
+
+	Type IP of instance.
+
+        Choose Add to list.
+
+Step 6: Create the Load Balancer
+
+    On the Review page, choose Create.
+
+
+

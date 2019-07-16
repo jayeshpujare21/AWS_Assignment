@@ -1,0 +1,28 @@
+1.Open the Amazon EC2 console 
+2.Choose Launch Instance.
+3.Choose an Amazon Machine Image (AMI),Configure Instance Details,Add tags,Configure Security Group,Choose Review and Launch,Choose Launch.
+4.Go to connect and change the permissions chmod 400 ***.pem
+5. Connect to your instance using its Public DNS
+6.Install Apache:
+	i) sudo apt update
+	ii) sudo apt install apache2
+	iii) sudo ufw app list
+	iv) sudo ufw allow 'Apache'
+	v) sudo ufw status
+	vi) sudo systemctl status apache2
+	vii) Access the default Apache landing page to confirm that the software is running properly through your IP address
+7.Adding index.htnl
+	i)Change directory- cd /var/www/html
+	ii)Make a subdirectory for sampledir--sudo mkdir sampledir
+	iii)cd sampledir
+	iv)Create a sample hello.html file -echo "<html><h1>Hello Jayesh from Amazon EFS</h1></html>" > index.html 
+	v)Open a browser window and enter the URL to access the file (it is the public DNS name of the EC2 instance followed by the file name)
+8.Snapshot
+	i)choose snapshot 
+	ii)choose create snapshot
+	iii)select instance and add instance ID , and copy tags
+	iv) select create snapshot
+	v)select snapshot and perform action copy and set new settings change the region.
+	vi)Select the changed region from console
+	vii)Go to AMI in EC2 console select Image.
+	viii)Launch new EC2 instance using image

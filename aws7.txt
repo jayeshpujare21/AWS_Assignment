@@ -1,0 +1,64 @@
+--Create an Autoscaling group and configure launch configuration it with Amazon linux ami and userdata to deploy basic website. Configure autoscaling.
+---To create a launch configuration using the console
+
+1.Open the Amazon EC2 console.
+
+2.On the navigation pane, under Auto Scaling, choose Launch Configurations.
+
+3.On the next page, choose Create launch configuration.
+
+4.On the Choose AMI page, select an Amazon AMI.
+
+5.On the Choose Instance Type page, select a hardware configuration for your instance. Choose Next: Configure details.
+
+6.On the Configure Details page, Add name
+
+7.For Advanced Details, IP Address Type, select an option. To connect to instances in a VPC, you must select an option that assigns a public IP address. If you want to connect to your instances but aren't sure whether you have a default VPC, select Assign a public IP address to every instance.
+
+8.Choose Skip to review.
+
+9.On the Review page, choose Edit security groups. Follow the instructions to choose an existing security group, and then choose Review.
+
+10.On the Review page, choose Create launch configuration.
+
+11.For Select an existing key pair or create a new key pair, select one of the listed options. Select the acknowledgment check box, and then choose Create launch configuration. 
+
+
+
+
+---To create an Auto Scaling group using a launch configuration (console)
+
+1.Open the Amazon EC2 console.
+
+2.On the navigation bar at the top of the screen, choose the same AWS Region that you used when you created the launch configuration.
+
+3.On the navigation pane, under Auto Scaling, choose Auto Scaling Groups.
+
+4.Choose Create Auto Scaling group.
+
+5.On the Create Auto Scaling Group page, choose Launch Configuration, choose an existing launch configuration, and then choose Next Step.
+
+6.On the Configure Auto Scaling group details page, do the following:
+
+        For Group name, enter a name for your Auto Scaling group.
+
+        For Group size, enter the initial number of instances for your Auto Scaling group.
+
+        For Network, choose a VPC for your Auto Scaling group.
+
+        For Subnet, choose one or more subnets in your VPC. Use subnets in multiple Availability Zones for high availability. For more information about high availability with Amazon EC2 Auto Scaling, see Distributing Instances Across Availability Zones.
+
+        (Optional) To register your Amazon EC2 instances with a load balancer, choose Advanced Details, choose Receive traffic from one or more load balancers, and choose one or more Classic Load Balancers or target groups.
+
+7.Choose Next: Configure scaling policies.
+
+8.On the Configure scaling policies page, choose one of the following options, and then choose Next: Configure Notifications:
+
+9.To automatically adjust the size of the Auto Scaling group based on criteria that you specify, choose Use scaling policies to adjust the capacity of this group and follow the directions. For more information, see Configure Scaling Policies.
+
+10.(Optional) To add tags, choose Edit tags, provide a tag key and value for each tag, and then choose Review.
+
+11.On the Review page, choose Create Auto Scaling group.
+
+
+
